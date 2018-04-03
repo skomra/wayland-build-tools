@@ -6,7 +6,7 @@
 # TODO: Bail if errors
 # TODO: Log output
 
-
+WLROOT="/home/aas/wacom/wayland"
 clone_or_update() {
 	repo=$1
 	dest=$(basename $repo)
@@ -39,42 +39,42 @@ clone_or_update() {
 	cd ${WLROOT}
 }
 
-clone_or_update git://anongit.freedesktop.org/wayland/wayland
-clone_or_update git://anongit.freedesktop.org/git/mesa/drm
-clone_or_update git://anongit.freedesktop.org/xcb/proto
-clone_or_update git://anongit.freedesktop.org/xorg/util/macros
-clone_or_update git://anongit.freedesktop.org/xcb/libxcb
-clone_or_update git://anongit.freedesktop.org/xorg/proto/presentproto
-clone_or_update git://anongit.freedesktop.org/xorg/proto/dri3proto
-clone_or_update git://anongit.freedesktop.org/xorg/lib/libxshmfence
-clone_or_update git://github.com/xkbcommon/libxkbcommon
-clone_or_update git://anongit.freedesktop.org/mesa/mesa
-clone_or_update git://anongit.freedesktop.org/pixman
-clone_or_update git://anongit.freedesktop.org/cairo
-clone_or_update git://git.savannah.gnu.org/libunwind
-clone_or_update git://anongit.freedesktop.org/libevdev
-clone_or_update git://anongit.freedesktop.org/wayland/wayland-protocols
-clone_or_update git://anongit.freedesktop.org/wayland/libinput
-clone_or_update git://anongit.freedesktop.org/wayland/weston
+clone_or_update https://anongit.freedesktop.org/git/wayland/wayland.git
+clone_or_update https://anongit.freedesktop.org/git/mesa/drm.git
+clone_or_update https://anongit.freedesktop.org/git/xcb/proto.git
+clone_or_update https://anongit.freedesktop.org/git/xorg/util/macros.git
+clone_or_update https://anongit.freedesktop.org/git/xcb/libxcb.git
+clone_or_update https://anongit.freedesktop.org/git/xorg/proto/presentproto.git
+clone_or_update https://anongit.freedesktop.org/git/xorg/proto/dri3proto.git
+clone_or_update https://anongit.freedesktop.org/git/xorg/lib/libxshmfence.git
+clone_or_update https://github.com/xkbcommon/libxkbcommon.git
+clone_or_update https://anongit.freedesktop.org/git/mesa/mesa.git
+clone_or_update https://anongit.freedesktop.org/git/pixman.git
+clone_or_update https://anongit.freedesktop.org/git/cairo
+clone_or_update https://git.savannah.gnu.org/git/libunwind.git
+clone_or_update https://anongit.freedesktop.org/git/libevdev.git
+clone_or_update https://anongit.freedesktop.org/git/wayland/wayland-protocols.git
+clone_or_update https://anongit.freedesktop.org/git/wayland/libinput.git
+clone_or_update https://anongit.freedesktop.org/git/wayland/weston.git
 
 if [ ${INCLUDE_XWAYLAND} ]; then
 	if [ ${WL_BITS} = "32" ]; then
-		clone_or_update git://anongit.freedesktop.org/xorg/lib/libxtrans
+		clone_or_update https://anongit.freedesktop.org/xorg/lib/libxtrans
 	fi
 
-	clone_or_update git://github.com/anholt/libepoxy
-	clone_or_update git://anongit.freedesktop.org/xorg/proto/glproto
-	clone_or_update git://anongit.freedesktop.org/xorg/proto/xproto
-	clone_or_update git://anongit.freedesktop.org/xorg/proto/xcmiscproto
-	clone_or_update git://anongit.freedesktop.org/xorg/lib/libxtrans
-	clone_or_update git://anongit.freedesktop.org/xorg/proto/bigreqsproto
-	clone_or_update git://anongit.freedesktop.org/xorg/proto/xextproto
-	clone_or_update git://anongit.freedesktop.org/xorg/proto/fontsproto
-	clone_or_update git://anongit.freedesktop.org/xorg/proto/videoproto
-	clone_or_update git://anongit.freedesktop.org/xorg/proto/recordproto
-	clone_or_update git://anongit.freedesktop.org/xorg/proto/resourceproto
-	clone_or_update git://anongit.freedesktop.org/xorg/proto/xf86driproto
-	clone_or_update git://anongit.freedesktop.org/xorg/proto/randrproto
-	clone_or_update git://anongit.freedesktop.org/xorg/lib/libxkbfile
-	clone_or_update git://anongit.freedesktop.org/xorg/xserver
+	clone_or_update https://github.com/anholt/libepoxy
+	clone_or_update https://anongit.freedesktop.org/git/xorg/proto/glproto.git
+	clone_or_update https://anongit.freedesktop.org/git/xorg/proto/xproto.git
+	clone_or_update https://anongit.freedesktop.org/git/xorg/proto/xcmiscproto.git
+	clone_or_update https://anongit.freedesktop.org/git/xorg/lib/libxtrans.git
+	clone_or_update https://anongit.freedesktop.org/git/xorg/proto/bigreqsproto.git
+	clone_or_update https://anongit.freedesktop.org/git/xorg/proto/xextproto.git
+	clone_or_update https://anongit.freedesktop.org/git/xorg/proto/fontsproto.git
+	clone_or_update https://anongit.freedesktop.org/git/xorg/proto/videoproto.git
+	clone_or_update https://anongit.freedesktop.org/git/xorg/proto/recordproto.git
+	clone_or_update https://anongit.freedesktop.org/git/xorg/proto/resourceproto.git
+	clone_or_update https://anongit.freedesktop.org/git/xorg/proto/xf86driproto.git
+	clone_or_update https://anongit.freedesktop.org/git/xorg/proto/randrproto.git
+	clone_or_update https://anongit.freedesktop.org/git/xorg/lib/libxkbfile.git
+	clone_or_update https://anongit.freedesktop.org/git/xorg/xserver.git
 fi
